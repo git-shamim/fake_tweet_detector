@@ -1,0 +1,5 @@
+streamlit
+transformers
+torch
+pandas
+emoji==0.6.0

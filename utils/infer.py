@@ -12,8 +12,8 @@ def load_model():
         tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
         model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
     else:
-        tokenizer = AutoTokenizer.from_pretrained("vinai/bertweet-base")
-        model = AutoModelForSequenceClassification.from_pretrained("vinai/bertweet-base", num_labels=2)
+        tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+        model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH, num_labels=2)
     model.eval()
     return tokenizer, model
 

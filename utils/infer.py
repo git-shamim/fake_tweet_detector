@@ -8,8 +8,13 @@ LABEL_MAP = {0: "🟥 Fake", 1: "🟩 Real"}
 
 @st.cache_resource
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("vinai/bertweet-base")
-    model = AutoModelForSequenceClassification.from_pretrained("vinai/bertweet-base", num_labels=2)
+    if USE_FINETUNED_MODEL:
+        tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+        model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
+    else:
+        tokenizer = AutoTokenizer.from_pretrained("vinai/bertweet-base")
+        model = AutoModelForSequenceClassification.from_pretrained("vinai/bertweet-base", num_labels=2)
+
     model.eval()
     return tokenizer, model
 

@@ -1,3 +1,4 @@
-USE_FINETUNED_MODEL = False
-MODEL_PATH = None  # Not used in this mode
+USE_FINETUNED_MODEL = True
+MODEL_PATH = "/mnt/models/bertweet_base"
+
 

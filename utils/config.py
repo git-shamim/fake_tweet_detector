@@ -1,6 +1,3 @@
-# Configuration for switching between Hugging Face and locally mounted model
-
 USE_FINETUNED_MODEL = False
+MODEL_PATH = None  # Not used in this mode
 
-# If fine-tuned: mount your GCS blob volume at this location
-MODEL_PATH = "/app/models/bertweet_base"

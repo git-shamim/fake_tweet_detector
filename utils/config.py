@@ -3,4 +3,4 @@
 USE_FINETUNED_MODEL = False
 
 # If fine-tuned: mount your GCS blob volume at this location
-MODEL_PATH = "/models/bertweet_base"
+MODEL_PATH = "/app/models/bertweet_base"

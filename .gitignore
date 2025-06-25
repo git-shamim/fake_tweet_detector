@@ -2,7 +2,10 @@ __pycache__/
 *.pyc
 *.pkl
 *.h5
-models/
 .cache/
+*.bin
+*.safetensors
+models/
 download_model/
 training/
+data/
